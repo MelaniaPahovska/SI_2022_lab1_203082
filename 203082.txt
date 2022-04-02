@@ -1,0 +1,188 @@
+1. https://github.com/MelaniaPahovska/SI_2022_lab1_203082.git
+
+3. git init
+38978@LAPTOP-5GV65ACB MINGW64 ~ (master)
+$ git remote add origin https://github.com/MelaniaPahovska/SI_2022_lab1_203082.git
+
+38978@LAPTOP-5GV65ACB MINGW64 ~ (master)
+$ git remote -v
+origin  https://github.com/MelaniaPahovska/SI_2022_lab1_203082.git (fetch)
+origin  https://github.com/MelaniaPahovska/SI_2022_lab1_203082.git (push)
+
+38978@LAPTOP-5GV65ACB MINGW64 ~ (master)
+$ git clone https://github.com/MelaniaPahovska/SI_2022_lab1_203082.git
+Cloning into 'SI_2022_lab1_203082'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+ 
+cd SI_2022_lab1_203082 // vleguvame vo repoto
+
+// inicijalizirame lokalen repozitorium i go povrzuvame 
+so git clone go klonirame odaleceniot repoziturium na nasiot kompjuter
+
+5. 38978@LAPTOP-5GV65ACB MINGW64 ~/SI_2022_lab1_203082 (master)
+$ git add shopping_list.txt
+
+
+38978@LAPTOP-5GV65ACB MINGW64 ~/SI_2022_lab1_203082 (master)
+$ git commit -m "Add 5 items to the shopping list"
+[master 02357e7] Add 5 items to the shopping list
+ 1 file changed, 5 insertions(+)
+ create mode 100644 shopping_list.txt
+
+// add i commite na txt dokumentot shopping_list
+
+6.38978@LAPTOP-5GV65ACB MINGW64 ~/SI_2022_lab1_203082 (master)
+$ git commit -a -m "Add quantities to the items"
+[master 8261360] Add quantities to the items
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+// add i commit odkako dodadov kolicina na proizvodite
+
+7. 38978@LAPTOP-5GV65ACB MINGW64 ~/SI_2022_lab1_203082 (master)
+$ git checkout -b branch1
+Switched to a new branch 'branch1'
+
+38978@LAPTOP-5GV65ACB MINGW64 ~/SI_2022_lab1_203082 (branch1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+38978@LAPTOP-5GV65ACB MINGW64 ~/SI_2022_lab1_203082 (master)
+$ git checkout -b branch2
+Switched to a new branch 'branch2'
+
+8. 38978@LAPTOP-5GV65ACB MINGW64 ~/SI_2022_lab1_203082 (branch2)
+$ git log
+commit 8261360ba338a47ab55bb9c2c341696c1bfa4bb1 (HEAD -> branch2, master, branch1)
+Author: MelaniaPashovska <melania.pashovska@students.finki.ukim.mk>
+Date:   Sat Apr 2 05:15:33 2022 +0200
+
+    Add quantities to the items
+
+commit 02357e7dd4c1cdbad9af33590bb664654de37fa3
+Author: MelaniaPashovska <melania.pashovska@students.finki.ukim.mk>
+Date:   Sat Apr 2 05:11:08 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit e226573dfff6ad7caa96de3a7283c5a47ab138c1 (origin/master, origin/HEAD)
+Author: MelaniaPahovska <100589854+MelaniaPahovska@users.noreply.github.com>
+Date:   Sat Apr 2 04:54:05 2022 +0200
+
+    Initial commit
+
+// dosegasnite logovi
+
+9. git push --all // sinhronizacija na site granki
+10.git checkout branch1 // se prefrlam na grankata branch1
+
+11.38978@LAPTOP-5GV65ACB MINGW64 ~/SI_2022_lab1_203082 (branch1)
+$ git commit -a -m "Change quantity of item #5"
+[branch1 6b61745] Change quantity of item #5
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+//ja smeniv kolicinata na petiot proizvod i napraviv add i commit
+
+12. git checkout master 
+// se vrakjame na grankata master
+
+13.38978@LAPTOP-5GV65ACB MINGW64 ~/SI_2022_lab1_203082 (master)
+$ git add shopping_list.txt
+
+38978@LAPTOP-5GV65ACB MINGW64 ~/SI_2022_lab1_203082 (master)
+$ git commit -m "Change quantity of item #2"
+[master 117201f] Change quantity of item #2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+// smeneta kolicina add na dokumentot i nov commit
+
+14.git push --all // sinhronizacija so oddaleceniot repozitorium
+15. git checkout branch2 // se prefrlam na grankata branch2
+16. 38978@LAPTOP-5GV65ACB MINGW64 ~/SI_2022_lab1_203082 (branch2)
+$ git commit -a -m "Modify item #4"
+[branch2 99021e5] Modify item #4
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+// promena na ime na edna stavka i nov commit
+
+17. 38978@LAPTOP-5GV65ACB MINGW64 ~/SI_2022_lab1_203082 (branch2)
+$ git log
+commit 99021e52857d58b679dd618dd58ccdd2f29bb555 (HEAD -> branch2)
+Author: MelaniaPashovska <melania.pashovska@students.finki.ukim.mk>
+Date:   Sat Apr 2 05:35:39 2022 +0200
+
+    Modify item #4
+
+commit 8261360ba338a47ab55bb9c2c341696c1bfa4bb1 (origin/branch2)
+Author: MelaniaPashovska <melania.pashovska@students.finki.ukim.mk>
+Date:   Sat Apr 2 05:15:33 2022 +0200
+
+    Add quantities to the items
+
+commit 02357e7dd4c1cdbad9af33590bb664654de37fa3
+Author: MelaniaPashovska <melania.pashovska@students.finki.ukim.mk>
+Date:   Sat Apr 2 05:11:08 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit e226573dfff6ad7caa96de3a7283c5a47ab138c1
+Author: MelaniaPahovska <100589854+MelaniaPahovska@users.noreply.github.com>
+Date:   Sat Apr 2 04:54:05 2022 +0200
+
+    Initial commit
+// dosegasni logovi
+18. 38978@LAPTOP-5GV65ACB MINGW64 ~/SI_2022_lab1_203082 (branch2)
+$ git commit -a -m "Add item #6"
+[branch2 d5b3a6c] Add item #6
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+38978@LAPTOP-5GV65ACB MINGW64 ~/SI_2022_lab1_203082 (branch2)
+$ git rebase -i HEAD~2
+[detached HEAD 6bd3f95] Modify item #4 and add item #6
+ Date: Sat Apr 2 05:35:39 2022 +0200
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+Successfully rebased and updated refs/heads/branch2.
+
+19. $ git log
+commit 6bd3f95fa67423f25f402c2e7f6971bd23fe77b2 (HEAD -> branch2)
+Author: MelaniaPashovska <melania.pashovska@students.finki.ukim.mk>
+Date:   Sat Apr 2 05:35:39 2022 +0200
+
+    Modify item #4 and add item #6
+
+commit 8261360ba338a47ab55bb9c2c341696c1bfa4bb1 (origin/branch2)
+Author: MelaniaPashovska <melania.pashovska@students.finki.ukim.mk>
+Date:   Sat Apr 2 05:15:33 2022 +0200
+
+    Add quantities to the items
+
+commit 02357e7dd4c1cdbad9af33590bb664654de37fa3
+Author: MelaniaPashovska <melania.pashovska@students.finki.ukim.mk>
+Date:   Sat Apr 2 05:11:08 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit e226573dfff6ad7caa96de3a7283c5a47ab138c1
+Author: MelaniaPahovska <100589854+MelaniaPahovska@users.noreply.github.com>
+Date:   Sat Apr 2 04:54:05 2022 +0200
+
+    Initial commit
+// logovi
+20. git checkout master // se prefrlam na master
+git merge branch1 // ja spojuvam grankata na koja nemase konflikti
+
+21.38978@LAPTOP-5GV65ACB MINGW64 ~/SI_2022_lab1_203082 (master)
+$ git merge branch2
+Auto-merging shopping_list.txt
+CONFLICT (content): Merge conflict in shopping_list.txt
+Automatic merge failed; fix conflicts and then commit the result.
+// se sluci konflikt i resiv da gi zadrzam promenite koj se naogjaat na branch2
+38978@LAPTOP-5GV65ACB MINGW64 ~/SI_2022_lab1_203082 (master|MERGING)
+$ git commit -a -m "Resolving conflicts in branch 2"
+[master eed7a75] Resolving conflicts in branch 2
+
+22. git add 203082.txt // go stavam vo staged dokumentot
+git commit -m "Add docs" // nov commit so tekstualnata datoteka
+23. git push -- all // sinhronizacija na site granki
