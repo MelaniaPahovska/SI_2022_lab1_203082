@@ -1,5 +1,7 @@
 rice x1
 water x8
 beer x5
-wine x2
-bread x5
+juice x2
+bread x2
+wine x3
+
