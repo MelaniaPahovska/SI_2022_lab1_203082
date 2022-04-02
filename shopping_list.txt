@@ -1,5 +1,5 @@
-rice
-water
-beer
-wine
-bread
+rice x1
+water x3
+beer x5
+wine x2
+bread x2
